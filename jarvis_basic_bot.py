@@ -112,7 +112,7 @@ while True:
         browser=webdriver.Chrome(executable_path=path)
         for i in range(1):
             elements=browser.get('https://www.google.com/search?q='+search_topic+'&start'+str(i))
-        time.sleep(60)
+        
     elif 'search in youtube' in query:
         speak('What should I search in youtube')
         path="F:\chrome driver 106\chromedriver.exe"
