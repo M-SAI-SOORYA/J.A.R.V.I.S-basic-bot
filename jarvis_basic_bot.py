@@ -123,6 +123,34 @@ while True:
         search_box.send_keys(user)
         search_button=driver.find_element(By.XPATH,"/html/body/ytd-app/div[1]/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/button")
         search_button.click()
+    elif 'locate' in query:
+        speak('Tell me the location')
+        path="F:\chrome driver 106\chromedriver.exe"
+        driver=webdriver.Chrome(path)
+        user=takeVoice().lower()
+        driver.get('https://www.google.com/maps/')
+        search_box=driver.find_element(By.XPATH,"/html/body/div[3]/div[9]/div[3]/div[1]/div[1]/div[1]/div[2]/form/div[2]/div[3]/div/input[1]")
+        search_box.send_keys(user)
+        search_button=driver.find_element(By.XPATH,"/html/body/div[3]/div[9]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/button")
+        search_button.click()
+    elif 'weather' in query:
+        speak('Tell me the location')
+
+        search_topic='weather in '+takeVoice().lower()
+        search_topic=search_topic.replace(' ','+')
+        path="F:\chrome driver 106\chromedriver.exe"
+        browser=webdriver.Chrome(executable_path=path)
+        for i in range(1):
+            elements=browser.get('https://www.google.com/search?q='+search_topic+'&start'+str(i))
+    elif 'play' in query:
+        speak('Which song should i play')
+        search_topic=takeVoice().lower()
+        search_topic=search_topic.replace(' ','+')
+        path="F:\chrome driver 106\chromedriver.exe"
+        browser=webdriver.Chrome(executable_path=path)
+        for i in range(1):
+            elements=browser.get('https://www.youtube.com/results?search_query='+search_topic+'&start'+str(i))
+
         
 
 
