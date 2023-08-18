@@ -1,4 +1,3 @@
-![45c3b3bdc0bc90966c3d1f2a71ee46b4](https://user-images.githubusercontent.com/96968484/204072641-04a9f545-2c40-4900-8eae-dfa4dfae9bae.jpg)
 
 # J.A.R.V.I.S-basic-bot
 Jarvis is a name given to voice assistant written in python language.
